@@ -16,9 +16,7 @@ Category.init(
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
-      validate: {
-        isAlpha: true,
-      }
+     
     },
   },
   {

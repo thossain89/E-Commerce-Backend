@@ -15,10 +15,7 @@ Tag.init(
     },
     tag_name : {
       type: DataTypes.STRING(50),
-      validate:{
-        isAlpha: true,
-      }
-
+     
     },
   },
   {

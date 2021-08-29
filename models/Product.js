@@ -20,9 +20,7 @@ Product.init(
       type: DataTypes.STRING(150),
       allowNull: false,
       unique: true,
-      validate: {
-        isAlpha: true,
-      }
+      
     },
     price : {
       type: DataTypes.DECIMAL,
