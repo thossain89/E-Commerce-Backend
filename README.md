@@ -1,248 +1,104 @@
-# 13 Object-Relational Mapping (ORM): E-Commerce Back End
+# E-commerce Backend
 
-## Your Task
+## ORM (OBJECT RELATIONAL MAPPING)
 
-Internet retail, also known as **e-commerce**, is the largest sector of the electronics industry, generating an estimated $29 trillion in 2019. E-commerce platforms like Shopify and WooCommerce provide a suite of services to businesses of all sizes. Due to their prevalence, understanding the fundamental architecture of these platforms will benefit you as a full-stack web developer.
 
-Your task is to build the back end for an e-commerce site by modifying starter code. You’ll configure a working Express.js API to use Sequelize to interact with a MySQL database.
+<a href="https://img.shields.io/badge/JavaScipt-100%25-yellow"><img alt="JavaScript use" src="https://img.shields.io/badge/JavaScipt-100%25-yellow"></a> <a href="https://img.shields.io/badge/Used-Node.js-red"><img alt="Node.js use" src="https://img.shields.io/badge/Used-Node.js-red"></a> <a href="https://img.shields.io/badge/Used-Express-orange"><img alt="Express" src="https://img.shields.io/badge/Used-Express-orange"></a> <a href="https://img.shields.io/badge/Used-Dotenv-blueviolet"><img alt="Dotenv" src="https://img.shields.io/badge/Used-Dotenv-blueviolet"></a> <a href="https://img.shields.io/badge/Used-Mysql2-informational"><img alt="Mysql2" src="https://img.shields.io/badge/Used-Mysql2-informational"></a> <a href="https://img.shields.io/badge/Used-Sequelize-success"><img alt="Sequelize" src="https://img.shields.io/badge/Used-Sequelize-success"></a>
 
-Because this application won’t be deployed, you’ll also need to provide a link to a walkthrough video that demonstrates its functionality and all of the acceptance criteria being met. You’ll need to submit a link to the video and add it to the readme of your project.
+## Table of Contents
 
-## User Story
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Walkthrough](#walkthrough)
+- [Contribution](#contribution)
+- [Test Instructions](#test-instructions)
+- [License](#license)
+- [Contact Information](#contact-information)
 
-```md
-AS A manager at an internet retail company
-I WANT a back end for my e-commerce website that uses the latest technologies
-SO THAT my company can compete with other e-commerce companies
+## Description
+
+    E-commerce Backend is a project focuses on Object Relational Mapping (ORM). Here we are creating an inventory for an e-commerce platform and
+    focusing on API ROUTES to perform RESTful CRUD operations.
+
+## Installation  
+
+#### Mysql is needed to create database. 
+#### INSOMNIA to test routes and perform CRUD operations
+To download INSOMNIA click [HERE!!!](https://insomnia.rest/)
+#### To run this code repo in your computer, user must install Node.js. 
+#### User also need the following dependencies
+
+    * Express
+    * mysql2 
+    * Dotenv 
+    * Sequelize
+    * Nodemon (Dev Dependencies)   
+    * Jest (To run test)
+
+- open terminal
+- clone the repo: `https://github.com/thossain89/E-Commerce-Backend.git`
+- cd into new directory (Must be in directory to work) 
+- Download all dependency package by entering `npm install`
+- Create The database in Mysql shell by running `SOURCE db/schema.sql`
+- Quit Mysql shell
+- Then run `node seeds/index.js` to seed the database
+- Run `node server.js` to start the server
+
+
+## Usage
+
+```
+To perform the crud operations we need INSOMNIA an open source API client. Use the following path to create, read, update, delete from database.
+
+- Products: localhost:3001/api/products
+- Categories: localhost:3001/api/categories
+- Tags: localhost:3001/api/tags
 ```
 
-## Acceptance Criteria
-
-```md
-GIVEN a functional Express.js API
-WHEN I add my database name, MySQL username, and MySQL password to an environment variable file
-THEN I am able to connect to a database using Sequelize
-WHEN I enter schema and seed commands
-THEN a development database is created and is seeded with test data
-WHEN I enter the command to invoke the application
-THEN my server is started and the Sequelize models are synced to the MySQL database
-WHEN I open API GET routes in Insomnia Core for categories, products, or tags
-THEN the data for each of these routes is displayed in a formatted JSON
-WHEN I test API POST, PUT, and DELETE routes in Insomnia Core
-THEN I am able to successfully create, update, and delete data in my database
-```
-
-## Mock-Up
-
-The following animation shows the application's GET routes to return all categories, all products, and all tags being tested in Insomnia Core:
-
-![In Insomnia Core, the user tests “GET tags,” “GET Categories,” and “GET All Products.”.](./Assets/13-orm-homework-demo-01.gif)
-
-The following animation shows the application's GET routes to return a single category, a single product, and a single tag being tested in Insomnia Core:
-
-![In Insomnia Core, the user tests “GET tag by id,” “GET Category by ID,” and “GET One Product.”](./Assets/13-orm-homework-demo-02.gif)
-
-The following animation shows the application's POST, PUT, and DELETE routes for categories being tested in Insomnia Core:
 
-![In Insomnia Core, the user tests “DELETE Category by ID,” “CREATE Category,” and “UPDATE Category.”](./Assets/13-orm-homework-demo-03.gif)
+## Demo of CRUD operations :
 
-Your walkthrough video should also show the POST, PUT, and DELETE routes for products and tags being tested in Insomnia Core.
+![DEMO CRUD OPERATIONS](./assets/img/demo.gif)  
 
-## Getting Started
 
-You’ll need to use the [MySQL2](https://www.npmjs.com/package/mysql2) and [Sequelize](https://www.npmjs.com/package/sequelize) packages to connect your Express.js API to a MySQL database and the [dotenv](https://www.npmjs.com/package/dotenv) package to use environment variables to store sensitive data.
 
-Use the `schema.sql` file in the `db` folder to create your database with MySQL shell commands. Use environment variables to store sensitive data like your MySQL username, password, and database name.
+## Walkthrough
 
-### Database Models
+### The walkthrough video is in three parts. The first part shows the setup, second one shows CRUD operations for products and third one covers the categories and tags route. 
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+#### Part-1: setup Walkthrough [click here !](https://drive.google.com/file/d/1KlTxjYQfyxJ0skVvireVYtjF1pzKyWN5/view).
 
-Your database should contain the following four models, including the requirements listed for each model:
+#### Part-2: products CRUD Operations Walkthrough [ click here!](https://drive.google.com/file/d/1RzhkS5vrOEcomn5Nvyz5vuUqr4_dF_gT/view).
+#### Part-3: categories and Tags CRUD operations Walkthrough [click here!](https://drive.google.com/file/d/1J9hfz5iHRj6WuvL6Xin0zFxauLgVOf2n/view).
 
-* `Category`
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+## Contribution
 
-  * `id`
+If you would like to contribute to this project reach out to me. Contact Information can be found below or by clicking on the 'Contact-Information' link provided in the Table of Contents.
 
-    * Integer.
-  
-    * Doesn't allow null values.
-  
-    * Set as primary key.
-  
-    * Uses auto increment.
+## Test Instructions
+#### For testing user must install Jest dependency in Node.js module
+#### You must Download jest to conduct any test in this repo  
+- Download jest in cmd by running the code `npm install jest`
+- Then run: `npm run test` in console
 
-  * `category_name`
-  
-    * String.
-  
-    * Doesn't allow null values.
 
-* `Product`
+## License
 
-  * `id`
-  
-    * Integer.
-  
-    * Doesn't allow null values.
-  
-    * Set as primary key.
-  
-    * Uses auto increment.
+<a href="https://img.shields.io/badge/License-MIT-brightgreen"><img alt="M.I.T. License use" src="https://img.shields.io/badge/License-MIT-brightgreen"></a>
 
-  * `product_name`
-  
-    * String.
-  
-    * Doesn't allow null values.
+## Contact Information
 
-  * `price`
-  
-    * Decimal.
-  
-    * Doesn't allow null values.
-  
-    * Validates that the value is a decimal.
+[Email Address](tanvirhossain2006@gmail.com)
 
-  * `stock`
-  
-    * Integer.
-  
-    * Doesn't allow null values.
-  
-    * Set a default value of `10`.
-  
-    * Validates that the value is numeric.
+[Github Repo ReadMe Generator](https://github.com/thossain89/Team_Profile_Generator.git)
 
-  * `category_id`
-  
-    * Integer.
-  
-    * References the `Category` model's `id`.
+## Authors   
 
-* `Tag`
+<img src="./assets/img/tanvir.jpg" width="50">  
 
-  * `id`
-  
-    * Integer.
-  
-    * Doesn't allow null values.
-  
-    * Set as primary key.
-  
-    * Uses auto increment.
 
-  * `tag_name`
-  
-    * String.
+* **Tanvir hossain** [Git Hub Profile](https://github.com/thossain89)  
 
-* `ProductTag`
-
-  * `id`
-
-    * Integer.
-
-    * Doesn't allow null values.
-
-    * Set as primary key.
-
-    * Uses auto increment.
-
-  * `product_id`
-
-    * Integer.
-
-    * References the `Product` model's `id`.
-
-  * `tag_id`
-
-    * Integer.
-
-    * References the `Tag` model's `id`.
-
-### Associations
-
-You'll need to execute association methods on your Sequelize models to create the following relationships between them:
-
-* `Product` belongs to `Category`, and `Category` has many `Product` models, as a category can have multiple products but a product can only belong to one category.
-
-* `Product` belongs to many `Tag` models, and `Tag` belongs to many `Product` models. Allow products to have multiple tags and tags to have many products by using the `ProductTag` through model.
-
-> **Hint:** Make sure you set up foreign key relationships that match the column we created in the respective models.
-
-### Fill Out the API Routes to Perform RESTful CRUD Operations
-
-Fill out the unfinished routes in `product-routes.js`, `tag-routes.js`, and `category-routes.js` to perform create, read, update, and delete operations using your Sequelize models.
-
-Note that the functionality for creating the many-to-many relationship for products has already been completed for you.
-
-> **Hint**: Be sure to look at the mini-project code for syntax help and use your model's column definitions to figure out what `req.body` will be for POST and PUT routes!
-
-### Seed the Database
-
-After creating the models and routes, run `npm run seed` to seed data to your database so that you can test your routes.
-
-### Sync Sequelize to the Database on Server Start
-
-Create the code needed in `server.js` to sync the Sequelize models to the MySQL database on server start.
-
-## Grading Requirements
-
-This homework is graded based on the following criteria: 
-
-### Deliverables: 10%
-
-* The GitHub repository containing your application code.
-
-### Walkthrough Video: 37%
-
-* A walkthrough video that demonstrates the functionality of the e-commerce back end must be submitted, and a link to the video should be included in your readme file.
-
-* The walkthrough video must show all of the technical acceptance criteria being met.
-
-* The walkthrough video must demonstrate how to create the schema from the MySQL shell.
-
-* The walkthrough video must demonstrate how to seed the database from the command line.
-
-* The walkthrough video must demonstrate how to start the application’s server.
-
-* The walkthrough video must demonstrate GET routes for all categories, all products, and all tags being tested in Insomnia Core.
-
-* The walkthrough video must demonstrate GET routes for a single category, a single product, and a single tag being tested in Insomnia Core.
-
-* The walkthrough video must demonstrate POST, PUT, and DELETE routes for categories, products, and tags being tested in Insomnia Core.
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the preceding acceptance criteria plus the following:
-
-  * Connects to a MySQL database using the [MySQL2](https://www.npmjs.com/package/mysql) and [Sequelize](https://www.npmjs.com/package/sequelize) packages.
-
-  * Stores sensitive data, like a user’s MySQL username, password, and database name, using environment variables through the [dotenv](https://www.npmjs.com/package/dotenv) package.
-
-  * Syncs Sequelize models to a MySQL database on the server start.
-
-  * Includes column definitions for all four models outlined in the homework instructions.
-
-  * Includes model associations outlined in the homework instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme with description and a link to a walkthrough video.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* A walkthrough video demonstrating the functionality of the application and all of the acceptance criteria being met.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project.
-
----
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+&copy; 2021 Tanvir Hossain, Coding Bootcamp ,University of Sydney and Trilogy Education
